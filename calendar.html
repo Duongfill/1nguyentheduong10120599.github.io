@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>ADMIN</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-32x32.png">
+        <link rel="stylesheet" href="calendar.css">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    </head>
+    <body>
+        <input type="checkbox" id="menu-toggle">
+        <div class="sidebar">
+            <div class="brand">
+                <span><img src="favicon/android-chrome-512x512.png" alt=""></span>
+                <h3>FTELECOM</h3>
+            </div>
+            <div class="sidemenu">
+                <div class="side-user">
+                    <div class="side-img" style="background-image: url(Image/user.png)"></div>
+                    <div class="user">
+                        <small>Quản lí</small>
+                        <p>Nguyễn Thế Dương</p>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="admin.html">
+                        <span class="las la-home"></span>
+                        <span>Home</span>
+                    </a></li>
+                    <li><a href="admin2.html" >
+                        <span class="las la-balance-scale"></span>
+                        <span>Doanh số</span>
+                    </a></li>
+                    <li><a href="thongke.html">
+                        <span class="las la-chart-pie"></span>
+                        <span>Thống kê</span>
+                    </a></li>
+                    <li><a href="calendar.html" class="active">
+                        <span class="las la-calendar"></span>
+                        <span>Lịch làm việc</span>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <label for="menu-toggle" class="menu-toggler">
+                    <span class="las la-bars"></span>
+                </label>
+                <div class="search">
+                    <span class="las la-search"></span>
+                    <input type="search" name="" id="" placeholder="search here">
+                </div>
+                <div class="head-icons">
+                    <span class="las la-bell"></span>
+                    <span class="las la-bookmark"></span>
+                    <span class="las la-comment"></span>
+                </div>
+            </header>
+            <main>
+                <div class="calendar">
+                    <div class="header">
+                    <a data-action="prev-month" href="javascript:void(0)" title="Previous Month"><i></i></a>
+                    <div class="text" data-render="month-year"></div>
+                    <a data-action="next-month" href="javascript:void(0)" title="Next Month"><i></i></a>
+                    </div>
+                    <div class="months" data-flow="left">
+                    <div class="month month-a">
+                        <div class="render render-a"></div>
+                    </div>
+                    <div class="month month-b">
+                        <div class="render render-b"></div>
+                    </div>
+                    </div>
+                </div>                
+            </main>
+        </div>
+
+          <script src="calendar.js"></script>
+    </body>
+</html>

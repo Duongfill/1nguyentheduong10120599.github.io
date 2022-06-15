@@ -1,0 +1,369 @@
+<html>
+    <head>
+        <title>TELECOM STORE</title>
+        <script src="https://kit.fontawesome.com/8d6ade88ff.js" crossorigin="anonymous"></script>
+        <script src="jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="./fontawesome-free-6.0.0-web/css/all.min.css"/>
+        <link rel="stylesheet" href="detail2.css">
+        <link rel="icon" href="/favicon/favicon.ico">
+        <script src="https://kit.fontawesome.com/8d6ade88ff.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./fontawesome-free-6.0.0-web/css/all.min.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".addcart").click(function(){
+                    var cartAmount = Number(sessionStorage.getItem("cartAmount"));
+                    if(cartAmount != null)
+                        cartAmount += 1;
+                    else
+                        cartAmount = 1;
+                    $("#cart-amount").text("Giỏ hàng ("+cartAmount+")");
+                    sessionStorage.setItem("cartAmount",cartAmount);
+    
+                    var pImg = $(this).parent().parent().find(".anh").attr("src");
+                    var pName = $(this).parent().parent().find(".tensp").text();
+                    var pPrice = $(this).parent().parent().find(".gia").text();
+                    var product = {
+                        "img": pImg,
+                        "name": pName,
+                        "price": pPrice
+                    }
+                    // alert(pImg +" "+ pName +" "+ pPrice);
+                    var cart = sessionStorage.getItem("cart");
+                    var cartProducts = "";
+                    if(cart!=null){
+                        cartProducts = cart +","+ JSON.stringify(product);
+                    }else
+                        cartProducts = JSON.stringify(product);
+                    sessionStorage.setItem("cart", cartProducts);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="Top">
+            <div id="logo">
+                <a href="index.html"><button >F TELECOM</button></a>
+            </div>
+            <div id="logo2">
+                <a href="index.html"><button >F</button></a>
+            </div>
+            <div id="search">
+                <input  type="text" placeholder="Tìm kiếm sản phẩm tại đây ..." >
+                <i class="fa fa-search"></i>
+            </div>
+            <div id="top-infor">
+                <ul>
+                    <li>
+                        <div class="icon">
+                            <a id="cart-amount" href="giohang.html">Giỏ hàng</a>
+                            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="personal">
+                <a href=""><i class="fa fa-user" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <!------------------------------------------------------------------------------------------------->
+        <div id="content">
+            <div>
+                <a>Điện thoại</a>
+                <a >></a>
+                <a>SamSung</a>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o"></i>
+                26 đánh giá
+            </div>
+            <div class="facebook">
+                <h3>Điện thoại SamSung S22 Ultra</h3>
+                <div id="las">
+                    <div id="like">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i> Like 5.4k                    
+                    </div>
+                    <div id="share">
+                        <i class="fa fa-share" aria-hidden="true"></i> Share
+                    </div>                    
+                </div>
+            </div>
+            <hr>
+            <div class="bannerx">
+                <div class="banner">
+                    <div class="slides">
+                        <input type="radio" name="r" id="r1" checked>
+                        <input type="radio" name="r" id="r2" >
+                        <input type="radio" name="r" id="r3" >
+                        <input type="radio" name="r" id="r4" >
+                        <input type="radio" name="r" id="r5" >
+                        <input type="radio" name="r" id="r6" >
+                        <input type="radio" name="r" id="r7" >
+                        <input type="radio" name="r" id="r8" >
+                        <input type="radio" name="r" id="r9" >
+                        <input type="radio" name="r" id="r10" >
+                        <div class="slide s1">
+                            <a href="#"><iframe width="100%" height="400" src="https://www.youtube.com/embed/GPX7CiADjIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        </div>
+                        <div class="slide">
+                            <a href="#"><img src="Image/SamsungGalaxyS22ultraRAM8GBfixhz-1020x570.jpg" alt=""></a>
+                        </div>
+                        <div class="slide">
+                            <a href=""><img src="Image/2.ButSpen-1020x570.jpg" alt=""></a>
+                        </div>
+                        <div class="slide">
+                            <a href="#"><img src="Image/3.Trainghiemthigiac-1020x570.jpg" alt=""></a>
+                        </div>      
+                        <div class="slide">
+                            <a href="#"><img src="Image/4.Vixulimanhme-1020x570.jpg" alt=""></a>
+                        </div>  
+                        <div class="slide">
+                            <a href="#"><img src="Image/5.Thietkebenbi-1020x570.jpg" alt=""></a>
+                        </div>  
+                        <div class="slide">
+                            <a href="#"><img src="Image/6.Dungluongpin-1020x570.jpg" alt=""></a>
+                        </div>       
+                        <div class="slide">
+                            <a href="#"><img src="Image/8.Matthanbongdem-1020x570.jpg" alt=""></a>
+                        </div>
+                        <div class="slide">
+                            <a href="#"><img src="Image/samsung-galaxy-s22-ultra-5-1.jpg" alt=""></a>
+                        </div>
+                        <div class="slide">
+                            <a href="#"><img src="Image/samsung-galaxy-s22-ultra-9-1.jpg" alt=""></a>
+                        </div>                    
+                    </div>
+                    <div class="navigation">
+                        <label for="r1" class="bar"><img src="Image/thumnailvideoip13.jpg" alt=""></label>
+                        <label for="r2" class="bar"><img src="Image/SamsungGalaxyS22ultraRAM8GBfixhz-1020x570.jpg" alt=""></label>
+                        <label for="r3" class="bar"> <img src="Image/2.ButSpen-1020x570.jpg" alt=""></label>
+                        <label for="r4" class="bar"><img src="Image/3.Trainghiemthigiac-1020x570.jpg" alt=""></label>
+                        <label for="r5" class="bar"><img src="Image/4.Vixulimanhme-1020x570.jpg" alt=""></label>
+                        <label for="r6" class="bar"><img src="Image/5.Thietkebenbi-1020x570.jpg" alt=""></label>
+                        <label for="r7" class="bar"> <img src="Image/6.Dungluongpin-1020x570.jpg" alt=""></label>
+                        <label for="r8" class="bar"><img src="Image/8.Matthanbongdem-1020x570.jpg" alt=""></label>
+                        <label for="r9" class="bar"> <img src="Image/samsung-galaxy-s22-ultra-5-1.jpg" alt=""></label>
+                        <label for="r10" class="bar"><img src="Image/samsung-galaxy-s22-ultra-9-1.jpg" alt=""></label>
+                    </div>
+                </div>
+                <div class="information">
+                    <div class="information-item">
+                        <div class="bannercolor">
+                            <div class="slideas">
+                                <input type="radio" name="x" id="x1" checked>
+                                <input type="radio" name="x" id="x2" >
+                                <input type="radio" name="x" id="x3" >
+                                <input type="radio" name="x" id="x4" >
+                                <input type="radio" name="x" id="x5" >
+                                <div class="slidea s2">
+                                    <a href="#"><img class="anh" src="Image/samsung-galaxy-s22-ultra-tim.jpg" alt=""></a>
+                                </div>
+                                <div class="slidea">
+                                    <a href="#"><img src="Image/galaxy-s22-ultra-black-1.jpg" alt=""></a>
+                                </div>
+                                <div class="slidea">
+                                    <a href="#"><img src="Image/galaxy-s22-ultra-white.jpg" alt=""></a>
+                                </div>
+                                <div class="slidea">
+                                    <a href="#"><img src="Image/samsung-galaxy-s22-ultra-256gb-1.jpg" alt=""></a>
+                                </div>
+                                <div class="slidea">
+                                    <a href="#"><img src="Image/samsung-galaxy-s22-ultra-tim.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="navigationa">
+                                <label for="x1" class="bara"><p></p></label>
+                                <label for="x2" class="bara"><p></p></label>
+                                <label for="x3" class="bara"><p></p></label>
+                                <label for="x4" class="bara"><p></p></label>
+                                <label for="x5" class="bara"><p></p></label>
+                            </div>
+                        </div>
+                        <div class="information-item-text">
+                            <li>
+                                <a class="tensp">SamSung S22 Ultra</a>
+                            </li>
+                            <li class="gia">28.000.000đ</li>
+                            <li>Đổi trong 15 ngày nếu có lỗi từ nhà sản xuất</li>
+                            <li>Cam kết hàng chính hãng từ SamSung</li>
+                        
+                            <li>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </li>
+                            <li onclick="addcart(this)" class="addcart"><button>Mua ngay</button></li>
+                            <li onclick="addcart(this)" class="addcart"><button>Trả góp 0% lãi xuất</button></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bannery">
+                <div class="infor-item">
+                    <ul>
+                        <img src="Image/samsung-galaxy-s22-ultra-note.jpg" alt="">
+                        <p>Galaxy S22 Ultra 5G chiếc smartphone cao cấp nhất trong bộ 
+                            3 Galaxy S22 series mà Samsung đã cho ra mắt. Tích hợp bút S
+                             Pen hoàn hảo trong thân máy, trang bị vi xử lý mạnh mẽ cho các 
+                             tác vụ sử dụng vô cùng mượt mà và nổi 
+                            bật hơn với cụm camera không viền độc đáo mang đậm dấu ấn riêng.   <a id="add-form">Xem thêm</a> .......
+                        </p>
+                        <div class="add-form">
+                            <div class="add-form-content">
+                                <h2>SamSung S22 Ultra<span id="add-close">━</span></h2>
+                                    <img src="Image/samsung-galaxy-s22-ultra-note.jpg" alt="">
+                                    <p>Galaxy S22 Ultra 5G chiếc smartphone cao cấp nhất trong bộ 3 Galaxy S22 series mà Samsung đã cho ra mắt. Tích hợp bút S Pen hoàn hảo trong thân máy, trang bị vi xử lý mạnh mẽ cho các tác vụ sử dụng vô cùng mượt mà và nổi bật hơn với cụm camera không viền độc đáo mang đậm dấu ấn riêng.
+                                    </p> <br>
+                                    <h4>Sở hữu một diện mạo đầy nổi bật</h4> <br>
+                                    <p>Galaxy S22 Ultra 5G được kế thừa form thiết kế từ những dòng Note trước đây của hãng đem đến cho bạn có cảm giác vừa mới lạ vừa hoài niệm. Trọng lượng của máy khoảng 228 g cho cảm giác cầm nắm đầm tay, khi cầm máy trần thì hơi có cảm giác dễ trượt.</p>
+                                    <img src="Image/samsung-galaxy-s22-ultra-10-2.jpg" alt="">
+                                    <p>Phần mặt lưng được làm nhám nên hạn chế tốt việc bám dấu vân tay, có thiết kế cũng khá đơn giản nhưng vẫn toát lên vẻ sang trọng và cao cấp của chiếc máy. Cụm camera sau trên Galaxy S22 Ultra 5G được thiết kế trần tạo cảm giác gọn gàng và cũng tạo nên một điểm nhấn độc đáo cho chiếc máy.
+                                    </p>
+                                    <img src="Image/samsung-galaxy-s22-ultra-11-2.jpg" alt="">
+                                    <p>Có thể nói Galaxy S22 Ultra 5G chính là chiếc máy đầu tiên được tích hợp bút S Pen hoàn hảo trong một thân máy của dòng Galaxy S. Giờ đây, bạn có thể dễ dàng phác thảo, ghi chú lại những ý tưởng vô cùng nhanh chóng với độ trễ đã được cải thiện cho cảm giác viết vẽ vô cùng chân thật.</p>
+                                    <img src="Image/samsung-galaxy-s22-ultra-7-2.jpg" alt="">
+                                    <p>Máy vẫn tiếp tục sử dụng khung viền thép cao cấp cho khả năng chống trầy xước và va đập một cách vượt trội, kết hợp với khả năng kháng bụi, nước chuẩn IP68.</p>
+                                    <img src="Image/samsung-galaxy-s22-ultra-1-2.jpg" alt="">
+                                    <h4>Cấu hình mạnh mẽ với Snapdragon 8 Gen 1</h4>
+                                    <p>Hiệu năng trên Galaxy S22 Ultra 5G là điều khỏi bàn cãi khi máy sử dụng chip Snapdragon 8 Gen 1 vô cùng mạnh mẽ với tiến trình sản xuất 4 nm. Khi máy chơi game cũng chỉ ấm lên một chút ở vị trí cụm camera chứ không hoàn toàn quá nóng như những sản phẩm khác khi dùng cùng con chip này.
+                                        Máy dễ dàng vượt qua được các tựa game Liên Quân, PUBG Mobile, cài đặt cấu hình tối đa thì biểu đồ FPS trên Galaxy S22 Ultra 5G vẫn khá ổn định, không bị drop quá nhiều. Kể cả tựa game Genshin Impact ở mức đồ họa mặc định thì máy chơi vẫn mượt mà, đồ họa hiển thị đẹp mắt.
+                                    </p>
+                                    <img src="Image/samsung-galaxy-s22-ultra-3-2.jpg" alt="">
+                                    <p>Còn nói về các tác vụ cơ bản như lướt web, đọc báo, xem YouTube,... thì máy hoàn thành một cách dễ dàng, sử dụng mượt mà, khả năng đa nhiệm thoải mái với RAM 8 GB.</p>
+                                    <img src="Image/samsung-galaxy-s22-ultra-6-2.jpg" alt="">
+                                    <p>Cùng công nghệ ProMotion thông minh có thể thay đổi tần số quét từ 10 đến 120 lần mỗi giây tùy thuộc vào ứng dụng, thao tác bạn đang sử dụng, nhằm tối ưu thời lượng sử dụng pin và trải nghiệm của bạn.</p>
+                                    <img src="Image/samsung-galaxy-s22-ultra-12-2.jpg" alt="">
+                                    <p>Viên pin trên Galaxy S22 Ultra 5G được hỗ trợ là 5000 mAh tương tự như Galaxy S21 Ultra 5G nhưng công suất sạc thì đã được nâng lên thành 45 W thay vì 25 W. Khả năng sạc nhanh ấn tượng với 30 phút được hơn 50% dung lượng và mất khoảng 1 giờ 10 phút là đầy.
+                                    </p>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <div class="content-3">
+                    <h3>Cấu hình Điện thoại SamSung S22 Ultra</h3>
+                    <table class="detailrow">
+                        <tr >
+                            <th>Màn hình</th>
+                            <th>Thông số</th>
+                        </tr>
+                        <tr>
+                            <tr><td>Công nghệ màn hình:</td><td>OLED</td></tr>
+                            <tr><td>Độ phân giải:</td><td>1284 x 2778 Pixels</td></tr>
+                            <tr><td>Màn hình rộng:</td><td>6.7" - Tần số quét 120Hz</td></tr>
+                            <tr><td>Độ sáng tối đa:</td><td>1200 nits</td></tr>
+                            <tr><td>Mặt kính:</td><td>Kính cường lực Ceramic Sheild</td></tr>                
+                        </tr>
+                    </table>
+                    <table class="detailrow" >
+                        <tr>
+                            <th >Camera sau</th>
+                            <th >Thông số</th>
+                        </tr>
+                        <tr>
+                            <tr><td>Độ phân giải:</td><td>3 camera 12MP</td></tr>
+                            <tr><td>Quay phim:</td><td>4K 2160p@ 60FPS</td></tr>
+                            <tr><td>Đèn Flash:</td><td>Kép </td></tr>
+                            <tr><td rowspan="6">Tính năng:</td></tr>
+                            <tr><td>Ban đêm (Night Mode)</td></tr>
+                            <tr><td>Chạm lấy nét</td></tr>
+                            <tr><td>Chống rung quang học (OIS)</td></tr>
+                            <tr><td>Góc siêu rộng</td></tr>
+                            <tr><td>Siêu cận (Macro)</td></tr>
+                        </tr>
+                        <tr>
+                            <th width="40%" >Camera trước</th>
+                            <th >Thông số</th>
+                        </tr>
+                        <tr>
+                            <tr><td>Độ phân giải:</td><td>12MP</td></tr>
+                            <tr><td rowspan="6">Tính năng:</td></tr> 
+                            <tr><td>HDR</td></tr>
+                            <tr><td>Nhận diện khuôn mặt</td></tr>
+                            <tr><td>Xoá phông</td></tr>
+                            <tr><td>Quay video 4K</td></tr>
+                            <tr><td>Face ID</td></tr>
+                        </tr>            
+                    </table>
+                    <table class="detailrow">
+                        <tr>
+                            <th width="40%" >Cấu hình</th>
+                            <th>Thông số</th>
+                        </tr>
+                        <tr>
+                            <tr><td>Hệ điều hành:</td><td>IOS 15</td></tr>
+                            <tr><td>Chip xử lý (CPU):</td><td>Apple A15 Bionic 6 nhân</td></tr>
+                            <tr><td>Tốc độ CPU:</td><td>3.22 GHz</td></tr>
+                            <tr><td>Chip đồ hoạ (GPU):</td><td>Apple GPU 5 nhân</td></tr>
+                            <tr><td>RAM:</td><td>6GB</td></tr>
+                            <tr><td rowspan="5">ROM:</td></tr>
+                            <tr><td>128GB</td></tr>
+                            <tr><td>256GB</td></tr>
+                            <tr><td>512GB</td></tr>
+                            <tr><td>1TB</td></tr>
+                        </tr>
+                    </table>
+                </div>
+            </div>  
+        </div>
+        <div class="footer">
+            <div class="bottom">
+                <ul class="row">
+                    <li class="col c-4 m-3 l-1">
+                        <h3>Hỗ trợ - Dịch vụ</h3> 
+                        <ul class="news1">
+                            <li><a href="">Mua hàng trả góp</a></li>
+                            <li><a href="">Hướng dẫn đặt hàng và thanh toán</a></li>
+                            <li><a href="">Chính sách bảo mật</a></li>
+                            <li><a href="">Chính sách đổi trả</a></li>
+                            <li><a href="">Điều khoản mua bán</a></li>
+                        </ul>
+                    </li>
+                    <li class="col c-4 m-3 l-1">
+                        <h3>Thông tin liên hệ</h3>
+                        <ul class="news1 news2">
+                            <li><a href=""><i class="fa fa-phone" aria-hidden="true"></i><b> Hotline:</b> 1900 2906</a></li>
+                            <li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i> <b> Facebook:</b> ftelecom.facebook.com</a></li>
+                            <li><a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i><b> Youtube:</b>  ftelecom.youtube.com</a></li>
+                        </ul>
+                    </li>
+                    <li class="col c-4 m-3 l-1">
+                        <h3>Tổng đài hỗ trợ</h3>
+                        <ul class="news1">
+                            <li>Gọi mua:<a href="">1800.1060</a>(7:30 - 22:00)</li>
+                            <li>Kỹ thuật:<a href="">1800.1763</a>(7:30 - 22:00)</li>
+                            <li>Khiếu nại:<a href="">1800.1062</a>(8:00 - 21:30)</li>
+                            <li>Bảo hành:<a href="">1800.1064</a>(8:00 - 21:00)</li>
+                        </ul>
+                    </li>
+                    <li class="col c-4 m-3 l-1">
+                        <h3>Thanh toán miễn phí</h3>
+                        <img src="Image/logo-master.png" alt="">
+                        <img src="Image/logo-visa.png" alt=""> <br>
+                        <img src="Image/logo-atm.png" alt="">
+                        <img src="Image/logo-jcb.png" alt=""> <br>
+                        <img src="Image/logo-samsungpay.png" alt="">
+                        <img src="Image/logo-vnpay.png" alt="">
+                    </li>
+                    <li class="col c-4 m-7 l-1">
+                        <h3>Đơn vị vận chuyển</h3>
+                        <img src="Image/ems-vnpost-.jpg" alt="">
+                        <img src="Image/giao-hang-tiet-kiem.png" alt="">
+                        <img src="Image/giaohangnhanh.jpg" alt="">
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="add-bottom">
+            <p>Địa chỉ: Phường Ngọc Khánh, Quận Ba Đình, Thành Phố Hà Nội. <br> Tổng đài hỗ trợ: 19001221 - Enail: cskh@hotro.ftelecom.vn</p>
+            <p>Người thiết kế: Nguyễn Thế Dương   -   Điện thoại liên hệ: 038962****</p>
+            <p>@2022 - Bản quyền thuộc về Nguyễn Thế Dương</p>
+        </div>
+        <script src="detail.js"></script>
+        
+    </body>  
+</html>
